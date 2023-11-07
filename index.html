@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>laba 1.2</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>HTML + CSS + JS + Canvas</h1>
+      <h2>Варламова София Р34672</h2>
+    </div>
+    <div class="button_group">
+      <button id="squareButton" onclick="selectShape('square')">
+        Рисовать квадрат
+      </button>
+      <button id="lineButton" onclick="selectShape('line')">
+        Рисовать линию
+      </button>
+      <button id="circleButton" onclick="selectShape('circle')">
+        Рисовать круг
+      </button>
+      <button id="triangleButton" onclick="selectShape('triangle')">
+        Рисовать треугольник
+      </button>
+    </div>
+    <div class="colors">
+      <div class="item">
+        <label for="fillColor">Цвет заливки:</label>
+        <input type="color" id="fillColor" />
+      </div>
+      <div class="item">
+        <label for="strokeColor">Цвет обводки:</label>
+        <input type="color" id="strokeColor" />
+      </div>
+      <button onclick="changeColors()">Изменить цвет</button>
+    </div>
+    <div class="options">
+      <label for="shapeSize">Размер фигуры:</label>
+      <input type="range" id="shapeSize" min="1" max="100" value="50" />
+      <span id="sizeValue">50</span>
+    </div>
+    <div class="info">
+      <p>Квадрат, круг, треугольник рисуются по нажатии левой кнопки мыши.</p>
+      <p>
+        Для того,чтобы нарисовать линию небходимо кликнуть левой кнопкой мыши в
+        место, где она будет начинаться, и кликнуть левой кнопкой мыши в место,
+        где она будет заканчиваться
+      </p>
+      <p>
+        Правой кнопкой мыши можно удалять с поля фигуры (инструмент "удаление"
+        имеет форму квадрата с размером 100*100 пикселей)
+      </p>
+    </div>
+    <canvas
+      id="сanvas"
+      onclick="drawShape(event)"
+      width="1000"
+      height="500"
+    ></canvas>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
